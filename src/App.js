@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { FaGithub } from 'react-icons/fa';
+import AddRemoveFunctions from './clase10/AddRemoveFunctions';
+import DudasPrimeraClase from './clase1/DudasPrimeraClase';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <div>
+      <h1>Material adicional para curso de React Js Coderhouse</h1>
+      <p>Tutor: Diego Grassino</p>
+      <p>
+        <FaGithub />
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/diegograssino/material-adicional-rj"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
-          Learn React
+          https://github.com/diegograssino/material-adicional-rj
         </a>
-      </header>
+      </p>
+      <hr />
+      <h2>Clase 1 (Repaso)</h2>
+      <DudasPrimeraClase />
+      <hr />
+      <h2>Clase 10 (Context)</h2>
+      <AddRemoveFunctions />
     </div>
   );
 }
