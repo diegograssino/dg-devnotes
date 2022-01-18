@@ -1,43 +1,73 @@
-import React from 'react';
+import { Box, Heading, Text, List, ListIcon, ListItem } from '@chakra-ui/react';
+import { FaCheckCircle, FaQuestionCircle } from 'react-icons/fa';
 
 function DudasPrimeraClase() {
   return (
-    <div>
-      En la primera clase es normal que tengamos algunas dudas, como por
-      ejemplo:
-      <ul>
-        <li>
-          <b>¿Cómo ingreso al zoom de la clase?</b> Deben ingresar a la
-          plataforma de Coder house{' '}
-          <a
-            href="https://plataforma.coderhouse.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            https://plataforma.coderhouse.com/
-          </a>{' '}
-          loguearse con su usuario y contraseña, que les llego al mail
-          oportunamente, y al ingresar al curso van a ver el listado de clases y
-          ahi mismo un boton para unirse al vivo.
-        </li>
-        <li>
-          <b>¿Se graba la clase?</b> Sí, la clase la graba el profesor y se sube
-          automaticamente a la plataforma, les va a llegar un mensaje al canal
-          del curso cuando ya este disponible (generalmente entre 2 y 6 horas).
-        </li>
-        <li>
-          <b>¿Donde puedo ver la clase?</b> En la plataforma van a ir
-          encontrando clase a clase todas las grabaciones.
-        </li>
-        <li>
-          <b>¿Donde puedo ver el material de la clase?</b> El material tambien
-          lo van a encontrar en la plataforma.
-        </li>
-        <li>
-          <b>
-            ¿Tengo que hacer el backend? ¿Puedo hacer mi propio backend? ¿No se
-            nada de backend, como voy a hacer?
-          </b>{' '}
+    <Box
+      marginX={50}
+      paddingX={50}
+      marginY={10}
+      paddingY={7}
+      shadow="md"
+      borderWidth="1px"
+      borderRadius={10}
+      backgroundColor="white"
+    >
+      <Heading as="h3" size="lg" fontWeight={700} paddingBottom={5}>
+        Preguntas frecuentes
+      </Heading>
+      <Text paddingBottom={3}>
+        En la primera clase es normal que tengamos algunas dudas, como por
+        ejemplo:
+      </Text>
+
+      <List spacing={2}>
+        <ListItem fontWeight={700}>
+          <ListIcon as={FaQuestionCircle} color="yellow.500" />
+          ¿Cómo ingreso al zoom de la clase?
+        </ListItem>
+        <ListItem>
+          <ListIcon as={FaCheckCircle} color="green.500" />
+          Deben ingresar a la plataforma de Coder house
+          https://plataforma.coderhouse.com/ loguearse con su usuario y
+          contraseña, que les llego al mail oportunamente, y al ingresar al
+          curso van a ver el listado de clases y ahi mismo un boton para unirse
+          al vivo.
+        </ListItem>
+        <ListItem fontWeight={700}>
+          <ListIcon as={FaQuestionCircle} color="yellow.500" />
+          ¿Se graba la clase?
+        </ListItem>
+        <ListItem>
+          <ListIcon as={FaCheckCircle} color="green.500" />
+          Sí, la clase la graba el profesor y se sube automaticamente a la
+          plataforma, les va a llegar un mensaje al canal del curso cuando ya
+          este disponible (generalmente entre 2 y 6 horas).
+        </ListItem>
+        <ListItem fontWeight={700}>
+          <ListIcon as={FaQuestionCircle} color="yellow.500" />
+          ¿Donde puedo ver la clase?
+        </ListItem>
+        <ListItem>
+          <ListIcon as={FaCheckCircle} color="green.500" />
+          En la plataforma van a ir encontrando clase a clase todas las
+          grabaciones.
+        </ListItem>
+        <ListItem fontWeight={700}>
+          <ListIcon as={FaQuestionCircle} color="yellow.500" />
+          ¿Donde puedo ver el material de la clase?
+        </ListItem>
+        <ListItem>
+          <ListIcon as={FaCheckCircle} color="green.500" />
+          El material tambien lo van a encontrar en la plataforma.
+        </ListItem>
+        <ListItem fontWeight={700}>
+          <ListIcon as={FaQuestionCircle} color="yellow.500" />
+          ¿Tengo que hacer el backend? ¿Puedo hacer mi propio backend? ¿No se
+          nada de backend, como voy a hacer?
+        </ListItem>
+        <ListItem>
+          <ListIcon as={FaCheckCircle} color="green.500" />
           Estas las respondo todas juntas explicandoles como va a ser el
           proyecto, vamos a hacer un e-commerce trabajando fuerte en el front
           con React, no vamos a generar nada en archivos html y si vamos a
@@ -49,100 +79,51 @@ function DudasPrimeraClase() {
           podremos elegir hacerlo con otra herramienta (salvo que el profesor
           les de el Ok, algo que no suele pasar). Es importante saber que
           tenemos que ajustarnos al contenido, porque el contenido se ajusta a
-          los desafios y a las entregas.{' '}
-        </li>
-      </ul>
-      <p>También aprovecho y les dejo algunos consejos:</p>
-      <ul>
-        <li>
-          No se atrasen, la modalidad de entrega de desafíos es demandante,
-          traten de llevar el ritmo.
-        </li>
-        <li>
-          Que van a necesitar, en general, como conocimientos anteriores: HTML y
-          CSS básicos, entender metodos de arrays de JS (map, filter, find,
-          spread operator como minimo), tener conceptos de fetch/ axios y
-          asincronía en JS, una idea de GIT/ GITHUB, saber utilizar un IDE,
-          ejemplo VSCode, y también manejo básico de la consola. Salvo HTML, en
-          general suele haber refuerzos en After Class de estos temas, pero son
-          refuerzos si vengo con cero conocimientos de todos estos temas debo
-          reforzarlos por mi cuenta para nivelarme.
-        </li>
-        <li>
-          Consejo personal: Traten de centrarse en entender React, si tienen el
-          tiempo para sumar librerias de CSS o de cualquier otra cosa,
-          increíble, pero prioridad a entender React.
-        </li>
-        <li>
-          Para quien no esta acostumbrado, la programación “Reactiva” cuesta
-          digerirse al principio, no se asusten porque es solo al principio, de
-          repente cierran los conceptos y todo se hace muy intuitivo.
-        </li>
-      </ul>
-      <p>Sumo algunas extensiones de VSCode que nunca están demás</p>
-      <ul>
-        <li>
-          Snippets para React:{' '}
-          <a
-            href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets"
-            target="_blank"
-            rel="noreferrer"
-          >
-            https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
-          </a>{' '}
-        </li>
-        <li>
-          Github Copilot:{' '}
-          <a
-            href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot"
-            target="_blank"
-            rel="noreferrer"
-          >
-            https://marketplace.visualstudio.com/items?itemName=GitHub.copilot
-          </a>{' '}
-        </li>
-        <li>
-          Snippets para React:{' '}
-          <a
-            href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets"
-            target="_blank"
-            rel="noreferrer"
-          >
-            https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
-          </a>{' '}
-        </li>
-        <li>
-          Snippets para React:{' '}
-          <a
-            href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets"
-            target="_blank"
-            rel="noreferrer"
-          >
-            https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
-          </a>{' '}
-        </li>
-        <li>
-          Snippets para React:{' '}
-          <a
-            href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets"
-            target="_blank"
-            rel="noreferrer"
-          >
-            https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
-          </a>{' '}
-        </li>
-        <li>
-          Snippets para React:{' '}
-          <a
-            href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets"
-            target="_blank"
-            rel="noreferrer"
-          >
-            https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
-          </a>{' '}
-        </li>
-      </ul>
-    </div>
+          los desafios y a las entregas.
+        </ListItem>
+        <ListItem fontWeight={700}>
+          <ListIcon as={FaQuestionCircle} color="yellow.500" />
+          ¿Que pasa si me atraso? ¿Si no pude entregar un desafio? ¿O no pude
+          valorar una clase?
+        </ListItem>
+        <ListItem>
+          <ListIcon as={FaCheckCircle} color="green.500" />
+          Ante estos casos es importante que plantees el caso a tu tutor
+          inmediatamente asi pueda guiarte.
+        </ListItem>
+        <ListItem fontWeight={700}>
+          <ListIcon as={FaQuestionCircle} color="yellow.500" />
+          ¿Es necesario saber Javascript, HTML o CSS?
+        </ListItem>
+        <ListItem>
+          <ListIcon as={FaCheckCircle} color="green.500" />
+          La respuesta es sí (está en los requisitos previos del curso),
+          necesito conocer Javascript, HTML y CSS, no hace falta ser un experto
+          ni saber todo esto al 100% (siempre hay lugar para repasos o
+          refuerzos) pero debo manejar estas tres tecnologias.
+        </ListItem>
+        <ListItem fontWeight={700}>
+          <ListIcon as={FaQuestionCircle} color="yellow.500" />
+          ¿Que temas de Javascript debería saber o repasar para este curso?
+        </ListItem>
+        <ListItem>
+          <ListIcon as={FaCheckCircle} color="green.500" />
+          Es importante conocer/ repasar metodos de arrays como map, filter,
+          find, spread operator, tambien conocer fetch/ axios y async/ await o
+          promises.
+        </ListItem>
+        <ListItem fontWeight={700}>
+          <ListIcon as={FaQuestionCircle} color="yellow.500" />
+          ¿Debo saber GIT o tener cuenta en Github para entregar los desafíos?
+        </ListItem>
+        <ListItem>
+          <ListIcon as={FaCheckCircle} color="green.500" />
+          La respuesta es sí, pero no hace falta saber nada muy avanzado, de
+          todas formas vas a encontrar en esta guía una explicación de como
+          hacerlo.
+        </ListItem>
+      </List>
+    </Box>
   );
 }
 
