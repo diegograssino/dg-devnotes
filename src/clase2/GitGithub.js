@@ -122,15 +122,15 @@ function GitGithub() {
         , una herramienta de los mismos creadores de React con la que podremos
         generar un proyecto pre configurado con todo listo para comenzar. Para
         esto, nuevamente iremos a la consola y escribiremos lo siguiente:
-        <Code width="100%" padding={2} marginY={2}>
-          npx create-react-app my-app
-        </Code>
+      </Text>
+      <Code width="100%" padding={2} marginY={2}>
+        npx create-react-app my-app
+      </Code>
+      <Text>
         Donde my-app es el nombre que le daremos a nuestro proyecto. Un detalle
         muy importante es evitar utilizar espacios y la palabra react en el
         nombre del proyecto.
-        <Text />
       </Text>
-
       <Heading
         as="h4"
         size="md"
@@ -149,39 +149,45 @@ function GitGithub() {
         , desde ya que primero debemos crear un cuenta en dicho servicio, una
         vez hecho esto, desde su misma página vamos a crear un repositorio
         haciendo click en el botón de New o Nuevo:
-        <Center marginY={3}>
-          <Image
-            src={`${process.env.PUBLIC_URL}/assets/newrepo1.png`}
-            alt="Commit"
-          />
-        </Center>
+      </Text>
+      <Center marginY={3}>
+        <Image
+          src={`${process.env.PUBLIC_URL}/assets/newrepo1.png`}
+          alt="Commit"
+        />
+      </Center>
+      <Text>
         Ingresaremos el nombre del proyecto y, sin modificar ninguna de las
         opciones por defecto, daremos click en Create repository/ Crear
         repositorio.
-        <Center marginY={3}>
-          <Image
-            src={`${process.env.PUBLIC_URL}/assets/newrepo2.png`}
-            alt="Commit"
-          />
-        </Center>
-        ¡Felicidades! Acabas de crear tu primero repo pero esta vacío, Github
-        nos estará mostrando algunas opciones para subirlo, tomaremos la segunda
-        opción ya que tenemos un proyecto existente ya creado, esta nos sugiere
-        algunos comando pero primero lo primero, nos dirigiremos a la consola y
-        nos aseguramos de estar dentro de la carpeta del proyecto:
-        <Code width="100%" padding={2} marginY={2}>
-          cd my-app
-        </Code>
+      </Text>
+      <Center marginY={3}>
+        <Image
+          src={`${process.env.PUBLIC_URL}/assets/newrepo2.png`}
+          alt="Commit"
+        />
+      </Center>
+      ¡Felicidades! Acabas de crear tu primero repo pero esta vacío, Github nos
+      estará mostrando algunas opciones para subirlo, tomaremos la segunda
+      opción ya que tenemos un proyecto existente ya creado, esta nos sugiere
+      algunos comando pero primero lo primero, nos dirigiremos a la consola y
+      nos aseguramos de estar dentro de la carpeta del proyecto:
+      <Code width="100%" padding={2} marginY={2}>
+        cd my-app
+      </Code>
+      <Text>
         Donde my-app es el nombre que le dieron a su proyecto al crearlo. Ahora
         que ya estamos dentro de la carpeta, sí utilizaremos los comandos
         sugeridos por Github:
-        <Code width="100%" padding={2} marginY={2}>
-          git remote add origin https://github.com/my-user/my-app.git
-          <br />
-          git branch -M main
-          <br />
-          git push -u origin main
-        </Code>
+      </Text>
+      <Code width="100%" padding={2} marginY={2}>
+        git remote add origin https://github.com/my-user/my-app.git
+        <br />
+        git branch -M main
+        <br />
+        git push -u origin main
+      </Code>
+      <Text>
         Recuerden que Github ya les va a dar todo para copiar y pegar, en este
         ejemplo my-user debería ser su nombre de usuario y my-app el nombre que
         le pusieron al repo. ¡Listo! Ahora ya tenemos nuestro repo enlazado y
@@ -203,14 +209,16 @@ function GitGithub() {
         lo cual debemos hacer seguido para tener un mejor control de versiones,
         debemos hacer lo siguiente, siempre desde adentro de la carpeta del
         proyecto:
-        <Code width="100%" padding={2} marginY={2}>
-          git add --all
-          <br />
-          git commit -m &quot;Comentario en imperativo de lo nuevo de esta
-          version&quot;
-          <br />
-          git push -u origin main
-        </Code>
+      </Text>
+      <Code width="100%" padding={2} marginY={2}>
+        git add --all
+        <br />
+        git commit -m &quot;Comentario en imperativo de lo nuevo de esta
+        version&quot;
+        <br />
+        git push -u origin main
+      </Code>
+      <Text>
         Es importante evitar tildes y ñ y que comentemos en imperativo (Agregue,
         modifique o elimine, por ejemplo), ese comentario se mostrará luego en
         el historial de versiones por lo que podré saber que se hizo. Pero,
@@ -218,29 +226,33 @@ function GitGithub() {
         actualizaciones o commits tienen un identificador el cual podremos saber
         ingresando a la pagina de nuestro repo y haciendo click donde se muestra
         a continuación:
-        <Center marginY={3}>
-          <Image
-            src={`${process.env.PUBLIC_URL}/assets/commit1.png`}
-            alt="Commit"
-          />
-        </Center>
-        <Center marginY={3}>
-          <Image
-            src={`${process.env.PUBLIC_URL}/assets/commit2.png`}
-            alt="Commit"
-          />
-        </Center>
-        <Center marginY={3}>
-          <Image
-            src={`${process.env.PUBLIC_URL}/assets/commit3.png`}
-            alt="Commit"
-          />
-        </Center>
+      </Text>
+      <Center marginY={3}>
+        <Image
+          src={`${process.env.PUBLIC_URL}/assets/commit1.png`}
+          alt="Commit"
+        />
+      </Center>
+      <Center marginY={3}>
+        <Image
+          src={`${process.env.PUBLIC_URL}/assets/commit2.png`}
+          alt="Commit"
+        />
+      </Center>
+      <Center marginY={3}>
+        <Image
+          src={`${process.env.PUBLIC_URL}/assets/commit3.png`}
+          alt="Commit"
+        />
+      </Center>
+      <Text>
         Finalmente, entregamos el link de esa misma pagina que va a tener este
         formato:
-        <Code width="100%" padding={2} marginY={2}>
-          https://github.com/my-user/my-app/commit/identificador
-        </Code>
+      </Text>
+      <Code width="100%" padding={2} marginY={2}>
+        https://github.com/my-user/my-app/commit/identificador
+      </Code>
+      <Text>
         Y con esto, ya sabemos todo lo necesario de GIT/ Github para poder
         entregar los desafios y el proyecto final!.
       </Text>
