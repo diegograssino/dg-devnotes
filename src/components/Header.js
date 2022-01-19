@@ -1,5 +1,5 @@
 import { Box, Center, Heading, Text } from '@chakra-ui/react';
-import Emoji from 'a11y-react-emoji';
+import Emoji from './Emoji';
 
 function Header() {
   return (

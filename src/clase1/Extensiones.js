@@ -8,9 +8,8 @@ import {
   Text,
   Badge,
 } from '@chakra-ui/react';
-import Emoji from 'a11y-react-emoji';
-import React from 'react';
 import { FaLink } from 'react-icons/fa';
+import Emoji from '../components/Emoji';
 
 function Extensiones() {
   return (
