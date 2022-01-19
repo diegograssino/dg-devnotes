@@ -8,33 +8,13 @@ import Header from './components/Header';
 import GitGithub from './clase2/GitGithub';
 
 function App() {
+  // Los otros colores #7900FF, #548CFF
   return (
     <ChakraProvider theme={theme}>
       <Box bgGradient="linear(to-l, #7900FF, #548CFF)" paddingY={3}>
         <Header />
-        {/* <Box
-          marginX={50}
-          paddingX={50}
-          paddingY={7}
-          shadow="md"
-          borderWidth="1px"
-          borderRadius={10}
-          // bgGradient="linear(to-l, #7900FF, #548CFF)"
-          bgGradient="linear(to-l, #93FFD8, #CFFFDC)"
-          color="white"
-        >
-          <Heading as="h2" size="lg" fontWeight={700}>
-            <Center>
-              <Emoji symbol="🗒️" alt="clase 1" />
-              <Text paddingLeft={2}>Clase 1 (Repaso)</Text>
-            </Center>
-          </Heading>
-        </Box> */}
-
         <DudasPrimeraClase />
-
         <Extensiones />
-
         <GitGithub />
       </Box>
     </ChakraProvider>
