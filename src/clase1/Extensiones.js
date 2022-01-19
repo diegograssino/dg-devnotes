@@ -6,7 +6,9 @@ import {
   ListItem,
   Link,
   Text,
+  Badge,
 } from '@chakra-ui/react';
+import Emoji from 'a11y-react-emoji';
 import React from 'react';
 import { FaLink } from 'react-icons/fa';
 
@@ -22,8 +24,15 @@ function Extensiones() {
       borderRadius={10}
       backgroundColor="white"
     >
+      <Badge variant="solid" colorScheme="green" marginRight={1}>
+        <Emoji symbol="⚛️" label="react" /> React JS
+      </Badge>
+      <Badge variant="solid" colorScheme="purple" marginRight={1}>
+        Clase 1
+      </Badge>
       <Heading as="h3" size="lg" fontWeight={700} paddingBottom={5}>
-        Extensiones útiles de VSCode
+        EXTENSIONES ÚTILES DE VISUAL STUDIO CODE
+        <hr />
       </Heading>
       <Text paddingBottom={5}>
         Les dejo el link para que instalen algunas extensiones de Visual Studio

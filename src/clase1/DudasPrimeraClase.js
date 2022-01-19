@@ -1,4 +1,13 @@
-import { Box, Heading, Text, List, ListIcon, ListItem } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  Text,
+  List,
+  ListIcon,
+  ListItem,
+  Badge,
+} from '@chakra-ui/react';
+import Emoji from 'a11y-react-emoji';
 import { FaCheckCircle, FaQuestionCircle } from 'react-icons/fa';
 
 function DudasPrimeraClase() {
@@ -13,8 +22,15 @@ function DudasPrimeraClase() {
       borderRadius={10}
       backgroundColor="white"
     >
+      <Badge variant="solid" colorScheme="green" marginRight={1}>
+        <Emoji symbol="⚛️" label="react" /> React JS
+      </Badge>
+      <Badge variant="solid" colorScheme="purple" marginRight={1}>
+        Clase 1
+      </Badge>
       <Heading as="h3" size="lg" fontWeight={700} paddingBottom={5}>
-        Preguntas frecuentes
+        PREGUNTAS FRECUENTES
+        <hr />
       </Heading>
       <Text paddingBottom={3}>
         En la primera clase es normal que tengamos algunas dudas, como por
