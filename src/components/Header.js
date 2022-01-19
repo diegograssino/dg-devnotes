@@ -5,9 +5,9 @@ function Header() {
   return (
     <Box
       color="white"
-      marginX={50}
-      paddingX={50}
-      paddingY={7}
+      marginX={[2, 5, 25, 50]}
+      paddingX={[2, 5, 25, 50]}
+      paddingY={[2, 5, 7]}
       shadow="md"
       //   borderWidth="3px"
       //   borderColor="gray.500"
@@ -16,17 +16,12 @@ function Header() {
     >
       <Heading as="h1" paddingBottom={3}>
         <Center>
-          <Emoji symbol="🗒️" label="react" />
+          <Emoji symbol="⚛️" label="react" />
           <Text paddingX={2}>DevNotes</Text>
-          <Emoji symbol="🗒️" label="react" />
+          <Emoji symbol="🗒️" label="notebook" />
         </Center>
       </Heading>
-      <Center>
-        <Text paddingRight={2}>Material adicional para el curso de</Text>
-        <Emoji symbol="⚛️" label="react" />
-        <Text paddingLeft={1}> React Js de Coderhouse</Text>
-      </Center>
-      <Center>Por Diego Grassino (Tutor)</Center>
+      <Center>Por Diego Grassino (Tutor en Coderhouse)</Center>
     </Box>
   );
 }

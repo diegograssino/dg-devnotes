@@ -14,20 +14,20 @@ import Emoji from '../components/Emoji';
 function Extensiones() {
   return (
     <Box
-      marginX={50}
-      paddingX={50}
+      marginX={[2, 5, 25, 50]}
+      paddingX={[2, 5, 25, 50]}
       marginY={10}
-      paddingY={7}
+      paddingY={[1, 2, 5, 7]}
       shadow="md"
       borderWidth="1px"
       borderRadius={10}
       backgroundColor="white"
     >
-      <Badge variant="solid" colorScheme="green" marginRight={1}>
+      <Badge variant="solid" colorScheme="teal" marginRight={1}>
         <Emoji symbol="⚛️" label="react" /> React JS
       </Badge>
-      <Badge variant="solid" colorScheme="purple" marginRight={1}>
-        Clase 1
+      <Badge variant="solid" colorScheme="green" marginRight={1}>
+        <Emoji symbol="​​📚​" label="react" /> Clase 1
       </Badge>
       <Heading as="h3" size="lg" fontWeight={700} paddingBottom={5}>
         EXTENSIONES ÚTILES DE VISUAL STUDIO CODE
