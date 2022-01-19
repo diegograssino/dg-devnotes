@@ -5,6 +5,7 @@ import theme from './theme/theme';
 import DudasPrimeraClase from './clase1/DudasPrimeraClase';
 import Extensiones from './clase1/Extensiones';
 import Header from './components/Header';
+import GitGithub from './clase2/GitGithub';
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
         <DudasPrimeraClase />
 
         <Extensiones />
+
+        <GitGithub />
       </Box>
     </ChakraProvider>
   );
