@@ -46,7 +46,7 @@ function GitGithub() {
         paddingBottom={2}
         paddingTop={3}
       >
-        Paso 1: Instalar git
+        <Emoji symbol="1️⃣" label="uno" /> Instalar git
       </Heading>
       <Text>
         Lo primero que debemos hacer es chequear si tenemos instalado git, para
@@ -75,7 +75,7 @@ function GitGithub() {
         paddingBottom={2}
         paddingTop={3}
       >
-        Paso 2: Instalar Node.js y NPM
+        <Emoji symbol="2️⃣" label="dos" /> Instalar Node.js y NPM
       </Heading>
       <Text>
         Luego haremos algo similar pero con Node, verificaremos primero si lo
@@ -106,7 +106,8 @@ function GitGithub() {
         paddingBottom={2}
         paddingTop={3}
       >
-        Paso 3: Crear un proyecto con create-react-app
+        <Emoji symbol="3️⃣" label="tres" /> Crear un proyecto con
+        create-react-app
       </Heading>
       <Text>
         Ahora que tenemos Node instalado tambien tendremos NPM, su gestor de
@@ -137,7 +138,8 @@ function GitGithub() {
         paddingBottom={2}
         paddingTop={3}
       >
-        Paso 4: Enlazar el proyecto con el repositorio y subirlo a GitHub
+        <Emoji symbol="4️⃣" label="cuatro" /> Enlazar el proyecto con el
+        repositorio y subirlo a GitHub
       </Heading>
       <Text>
         Ahora ya tenemos nuestro proyecto creado, pero no lo tenemos subido a{' '}
@@ -193,7 +195,8 @@ function GitGithub() {
         paddingBottom={2}
         paddingTop={3}
       >
-        Paso 5: Subir actualizaciones y entregar el link al commit
+        <Emoji symbol="5️⃣" label="cinco" /> Subir actualizaciones y entregar el
+        link al commit
       </Heading>
       <Text>
         A partir de ahora, si queremos subir una actualización a nuestro repo,
