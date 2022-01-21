@@ -1,8 +1,8 @@
 import React from 'react';
 import List from './List';
 
-const Container = () => {
-  // Este es el container y se va a ocupar de hacer llamadas a APIs o conseguir/ contener los datos que vamos a utilizar.
+function Container() {
+  // Este es el container y se va a ocupar de hacer llamadas a APIs o conseguir contener los datos que vamos a utilizar.
 
   const DATA = [
     {
@@ -24,6 +24,6 @@ const Container = () => {
       <List data={DATA} />
     </div>
   );
-};
+}
 
 export default Container;
