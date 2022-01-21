@@ -9,7 +9,7 @@ import {
   Center,
 } from '@chakra-ui/react';
 // import { FaLink } from 'react-icons/fa';
-import Emoji from '../components/Emoji';
+import Emoji from '../../components/Emoji';
 
 function GitGithub() {
   return (

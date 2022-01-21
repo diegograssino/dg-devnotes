@@ -8,7 +8,7 @@ import {
   Badge,
 } from '@chakra-ui/react';
 import { FaQuestionCircle } from 'react-icons/fa';
-import Emoji from '../components/Emoji';
+import Emoji from '../../components/Emoji';
 
 function DudasPrimeraClase() {
   return (
