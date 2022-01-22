@@ -6,6 +6,7 @@ import theme from './theme/theme';
 import Header from './components/Header';
 import ArticleListContainer from './list/ArticleListContainer';
 import ContentContainer from './content/ContentContainer';
+import Contact from './components/Contact';
 
 function App() {
   // Los otros colores #7900FF, #548CFF
@@ -16,6 +17,8 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<ArticleListContainer />} exact />
+            <Route path="/contact" element={<Contact />} exact />
+
             <Route
               path="/category/:id"
               element={<ArticleListContainer />}

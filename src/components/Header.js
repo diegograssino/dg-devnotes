@@ -1,4 +1,5 @@
-import { Box, Center, Heading, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, HStack, Spacer, Text } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import Emoji from './Emoji';
 
 function Header() {
@@ -6,22 +7,35 @@ function Header() {
     <Box
       color="white"
       marginX={[2, 5, 25, 50]}
-      paddingX={[2, 5, 25, 50]}
-      paddingY={[2, 5, 7]}
+      paddingX={[2, 5, 10]}
+      paddingY={[2, 3, 4]}
       shadow="md"
-      //   borderWidth="3px"
-      //   borderColor="gray.500"
       borderRadius={10}
       backgroundColor="rgba(255, 255, 255, 0.15)"
     >
-      <Heading as="h1" paddingBottom={3}>
-        <Center>
-          <Emoji symbol="⚛️" label="react" />
-          <Text paddingX={2}>DevNotes</Text>
-          <Emoji symbol="🗒️" label="notebook" />
-        </Center>
-      </Heading>
-      <Center>Por Diego Grassino (Tutor en Coderhouse)</Center>
+      <Flex>
+        <Link to="/">
+          <Heading as="h1" size="md">
+            <HStack spacing="1">
+              <Emoji symbol="⚛️" label="react" />
+              <Text>DevNotes</Text>
+              {/* <Emoji symbol="🗒️" label="notebook" /> */}
+            </HStack>
+          </Heading>
+        </Link>
+        <Spacer />
+        <Link to="/contact">
+          <HStack spacing="1">
+            <Text fontSize="sm">
+              <Emoji symbol="📧" label="contact" />
+            </Text>
+            <Text fontWeight="bold" fontSize="sm">
+              Contacto
+            </Text>
+          </HStack>
+        </Link>
+      </Flex>
+      {/* <Center>Por Diego Grassino (Tutor en Coderhouse)</Center> */}
     </Box>
   );
 }
