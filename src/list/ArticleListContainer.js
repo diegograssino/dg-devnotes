@@ -34,8 +34,6 @@ function ArticleListContainer() {
         setArticles(finalResult);
       })
       .finally(() => setLoading(false));
-
-    console.log(articles);
   }, [params.id]);
 
   return (
