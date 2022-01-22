@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, HStack, Spacer, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import Emoji from './Emoji';
+import { VscSymbolNamespace, VscMention, VscInfo } from 'react-icons/vsc';
 
 function Header() {
   return (
@@ -17,25 +17,25 @@ function Header() {
         <Link to="/">
           <Heading as="h1" size="md">
             <HStack spacing="1">
-              <Emoji symbol="⚛️" label="react" />
+              <VscSymbolNamespace />
               <Text>DevNotes</Text>
-              {/* <Emoji symbol="🗒️" label="notebook" /> */}
             </HStack>
           </Heading>
         </Link>
         <Spacer />
-        <Link to="/contact">
-          <HStack spacing="1">
-            <Text fontSize="sm">
-              <Emoji symbol="📧" label="contact" />
-            </Text>
-            <Text fontWeight="bold" fontSize="sm">
-              Contacto
-            </Text>
-          </HStack>
-        </Link>
+        <HStack spacing="3">
+          <Link to="/info">
+            <Box>
+              <VscInfo />
+            </Box>
+          </Link>
+          <Link to="/contact">
+            <Box fontSize="xl">
+              <VscMention />
+            </Box>
+          </Link>
+        </HStack>
       </Flex>
-      {/* <Center>Por Diego Grassino (Tutor en Coderhouse)</Center> */}
     </Box>
   );
 }

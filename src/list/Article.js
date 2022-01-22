@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, HStack, Text } from '@chakra-ui/react';
-import Emoji from '../components/Emoji';
+import { VscWatch, VscPerson, VscArrowRight } from 'react-icons/vsc';
 
 function Article({ article }) {
   return (
@@ -13,27 +13,36 @@ function Article({ article }) {
       borderRadius={10}
       backgroundColor="white"
     >
-      <Heading as="h3" size="lg" fontWeight={700} paddingBottom={1}>
+      <Heading as="h3" size="md" fontWeight={700} paddingBottom="2">
         <Text>{article.title.toUpperCase()}</Text>
       </Heading>
-      <HStack spacing="1" paddingBottom={2}>
-        <Emoji symbol="📚" label="article" />
-        <Text color="gray.400" fontSize="sm">
+      <HStack spacing="0" paddingBottom={1}>
+        <Text color="gray.400" fontSize="xs">
+          <VscWatch />
+        </Text>
+        <Text color="gray.400" fontSize="xs" paddingRight="2">
           {new Intl.DateTimeFormat('es-AR').format(
             new Date(article.date.seconds * 1000)
           )}
         </Text>
-        <Text color="teal.300" fontSize="sm" fontWeight="bold">
+        <Text color="teal.300" fontSize="xs" fontWeight="bold">
+          <VscPerson />
+        </Text>
+        <Text color="teal.300" fontSize="xs" fontWeight="bold">
           {article.author}
         </Text>
       </HStack>
       <hr />
-      <Text marginY="2">{article.description}</Text>
+      <Text marginY="2" fontSize="smd">
+        {article.description}
+      </Text>
       <hr />
-      <Flex marginTop={2}>
-        <Emoji symbol="➡️" label="arrow" />
+      <Flex marginTop={2} justifyContent="end">
         <Text color="gray.400" fontSize="sm">
-          Ir al articulo
+          Leer articulo completo
+        </Text>
+        <Text color="gray.400" fontSize="sm" paddingTop="1">
+          <VscArrowRight />
         </Text>
       </Flex>
     </Box>
