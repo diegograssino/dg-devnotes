@@ -1,5 +1,7 @@
 import { Box, Flex, Heading, HStack, Text } from '@chakra-ui/react';
 import { VscWatch, VscPerson, VscArrowRight } from 'react-icons/vsc';
+import Badges from '../components/Badges';
+import COLORS from '../constants/colors';
 
 function Article({ article }) {
   return (
@@ -11,24 +13,28 @@ function Article({ article }) {
       shadow="md"
       borderWidth="1px"
       borderRadius={10}
-      backgroundColor="white"
+      backgroundColor={COLORS.tertiary}
     >
+      {/* <Badge colorScheme="purple" marginBottom="2">
+        {article.category}
+      </Badge> */}
+      <Badges category={article.category} />
       <Heading as="h3" size="md" fontWeight={700} paddingBottom="2">
         <Text>{article.title.toUpperCase()}</Text>
       </Heading>
       <HStack spacing="0" paddingBottom={1}>
-        <Text color="gray.400" fontSize="xs">
+        <Text color={COLORS.secondary} fontSize="xs">
           <VscWatch />
         </Text>
-        <Text color="gray.400" fontSize="xs" paddingRight="2">
+        <Text color={COLORS.secondary} fontSize="xs" paddingRight="2">
           {new Intl.DateTimeFormat('es-AR').format(
             new Date(article.date.seconds * 1000)
           )}
         </Text>
-        <Text color="teal.300" fontSize="xs" fontWeight="bold">
+        <Text color={COLORS.quaternary} fontSize="xs" fontWeight="bold">
           <VscPerson />
         </Text>
-        <Text color="teal.300" fontSize="xs" fontWeight="bold">
+        <Text color={COLORS.quaternary} fontSize="xs" fontWeight="bold">
           {article.author}
         </Text>
       </HStack>
@@ -38,10 +44,10 @@ function Article({ article }) {
       </Text>
       <hr />
       <Flex marginTop={2} justifyContent="end">
-        <Text color="gray.400" fontSize="sm">
+        <Text color={COLORS.quaternary} fontSize="sm">
           Leer articulo completo
         </Text>
-        <Text color="gray.400" fontSize="sm" paddingTop="1">
+        <Text color={COLORS.quaternary} fontSize="sm" paddingTop="1">
           <VscArrowRight />
         </Text>
       </Flex>
