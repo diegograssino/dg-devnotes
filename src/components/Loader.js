@@ -1,13 +1,21 @@
-import { Container, Center } from '@chakra-ui/react';
-import { TailSpin } from 'react-loader-spinner';
+import { Spinner, Box } from '@chakra-ui/react';
 
 function Loader() {
   return (
-    <Container w="100vw" h="100vh">
-      <Center height={200}>
-        <TailSpin color="#FFF" height={80} width={80} ariaLabel="loading" />
-      </Center>
-    </Container>
+    <Box position="relative" minWidth="100%" minHeight="100vh" height="100%">
+      <Box
+        position="absolute"
+        top="55%"
+        left="45%"
+        transform="translateY(-50%, -50%)"
+      >
+        <Spinner size="xl" thickness={4} color="purple.200" label="loading" />
+      </Box>
+    </Box>
+
+    // <Container minWidth="100%" minHeight="100vh" background={COLORS.navbar}>
+    //   <Spinner size="xl" thickness={4} color="purple.400" label="loading" />
+    // </Container>
   );
 }
 

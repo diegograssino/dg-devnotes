@@ -22,7 +22,6 @@ function App() {
           <Header />
           <Box
             bgGradient={`linear(to-l, ${COLORS.gradientBackgroud})`}
-            // bg={COLORS.primary}
             paddingY="55px"
             h="100%"
           >
