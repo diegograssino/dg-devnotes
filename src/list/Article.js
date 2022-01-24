@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { VscWatch, VscPerson, VscArrowRight } from 'react-icons/vsc';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { firestore } from '../database/firebase';
 import Badges from '../components/Badges';
 import COLORS from '../constants/colors';
@@ -65,9 +66,11 @@ function Article({ article }) {
       </Text>
       <hr />
       <Flex marginTop={2}>
-        <Text color={COLORS.quaternary} fontSize="sm">
-          Leer articulo completo
-        </Text>
+        <Link to={`/article/${article.id}`}>
+          <Text color={COLORS.quaternary} fontSize="sm">
+            Leer articulo completo
+          </Text>
+        </Link>
         <Text color={COLORS.quaternary} fontSize="sm" paddingTop="1">
           <VscArrowRight />
         </Text>
