@@ -14,7 +14,11 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <BrowserRouter>
-        <Box bgGradient={`linear(to-l, ${COLORS.gradientBackgroud})`} h="100%">
+        <Box
+          bgGradient={`linear(to-l, ${COLORS.gradientBackgroud})`}
+          h="100%"
+          minHeight="100vh"
+        >
           <Header />
           <Box
             bgGradient={`linear(to-l, ${COLORS.gradientBackgroud})`}

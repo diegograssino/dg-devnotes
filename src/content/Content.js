@@ -33,7 +33,6 @@ function Content({ content }) {
   }, [thumbsUp]);
   return (
     <div>
-      {' '}
       <Toaster />
       <Box
         marginX={[2, 5, 25, 50]}
