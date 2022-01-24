@@ -3,7 +3,7 @@ const COLORS = {
   secondary: '#3FC1C9',
   tertiary: '#F5F5F5',
   quaternary: '#FC5185',
-  navbar: 'rgba(255, 255, 255, 0.9)',
+  navbar: 'rgba(255, 255, 255, 0.3)',
   gradientBackgroud: '#7900FF, #548CFF',
 };
 

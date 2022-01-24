@@ -1,10 +1,33 @@
-import { Box, Flex, Heading, HStack, Text, Spacer } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Heading,
+  HStack,
+  Text,
+  Spacer,
+  Button,
+} from '@chakra-ui/react';
 import { VscWatch, VscPerson, VscArrowRight } from 'react-icons/vsc';
-import { MdOutlineThumbUp, MdThumbUp } from 'react-icons/md';
+import { useEffect, useState } from 'react';
+import { firestore } from '../database/firebase';
 import Badges from '../components/Badges';
 import COLORS from '../constants/colors';
+import Emoji from '../components/Emoji';
 
 function Article({ article }) {
+  const [thumbsUp, setThumbsUp] = useState(article.likes);
+  const [alreadyLiked, setAlreadyLiked] = useState(false);
+
+  useEffect(() => {
+    if (!alreadyLiked && thumbsUp > article.likes) {
+      const like = firestore.collection('articles').doc(article.id);
+      like.update({
+        likes: thumbsUp,
+      });
+      setAlreadyLiked(true);
+    }
+  }, [thumbsUp]);
+
   return (
     <Box
       marginX={[2, 5, 25, 50]}
@@ -49,25 +72,20 @@ function Article({ article }) {
           <VscArrowRight />
         </Text>
         <Spacer />
-        <Text color={COLORS.secondary} fontSize="sm" fontWeight="bold">
-          5
-        </Text>
-        <Text
-          color={COLORS.secondary}
+        <Button
+          variant={alreadyLiked ? 'solid' : 'outline'}
+          colorScheme="teal"
+          size="xs"
           fontSize="sm"
-          paddingTop="1"
-          paddingLeft="1"
+          fontWeight="bold"
+          rightIcon={<Emoji label="emoji" symbol="👍🏻" />}
+          paddingLeft="3"
+          onClick={() => {
+            setThumbsUp(article.likes + 1);
+          }}
         >
-          <MdOutlineThumbUp />
-        </Text>
-        <Text
-          color={COLORS.secondary}
-          fontSize="sm"
-          paddingTop="1"
-          paddingLeft="1"
-        >
-          <MdThumbUp />
-        </Text>
+          {thumbsUp}
+        </Button>
       </Flex>
     </Box>
   );
