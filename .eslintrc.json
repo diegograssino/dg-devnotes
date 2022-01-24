@@ -15,7 +15,11 @@
   "rules": {
     "eqeqeq": "error",
     "semi": ["off", "never"],
-    "indent": ["warn", 2, { "SwitchCase": 1 }],
+    // "indent": [
+    //   "warn",
+    //   2,
+    //   { "SwitchCase": 1, "ignoredNodes": ["offsetTernaryExpressions"] }
+    // ],
     "react/prop-types": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/func-names": "off",
@@ -31,7 +35,7 @@
     "max-len": [
       "error",
       {
-        "code": 80,
+        "code": 120,
         "tabWidth": 2,
         "ignoreUrls": true
       }

@@ -17,9 +17,8 @@ function ArticleListContainer() {
       ? firestore
           .collection('articles')
           .where('category', '==', params.id)
-          .orderBy('date', 'desc')
-      : firestore.collection('articles').orderBy('date', 'desc');
-    //   .orderBy('date', 'desc');
+          .orderBy('date')
+      : firestore.collection('articles').orderBy('date');
 
     filter
       .get()
