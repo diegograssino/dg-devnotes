@@ -10,6 +10,7 @@ function Header() {
       bgGradient={`linear(to-l, ${COLORS.gradientBackgroud})`}
       w="full"
       position="fixed"
+      zIndex="1100"
     >
       <Box
         backgroundColor={COLORS.navbar}
